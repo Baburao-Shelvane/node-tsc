@@ -1,15 +1,15 @@
 import 'dotenv/config';
 import App from './app';
-//import * as mongoose from 'mongoose';
+import * as mongoose from 'mongoose';
 
-/* const {
+  const {
     MONGO_USER,
     MONGO_PASSWORD,
     MONGO_PATH,
   } = process.env;
    
-  mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`);
- */
+  mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`, {useNewUrlParser: true });
+ 
 import PostsController from './posts/posts.controller';
  
 const app = new App(
